@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hochzeitseinladung – Thuỳ Dương & Dominik</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #fdf3ee 0%, #fce6dc 25%, #fdf0f6 60%, #f8eaf8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Jost', sans-serif;
+  padding: 24px;
+}
+
+.card {
+  background: rgba(255,252,250,0.88);
+  backdrop-filter: blur(20px);
+  border-radius: 32px;
+  border: 1px solid rgba(220,175,185,0.4);
+  padding: 58px 52px 52px;
+  max-width: 540px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 60px rgba(195,130,150,0.12), 0 2px 16px rgba(195,130,150,0.07);
+  animation: rise 1.3s cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes rise {
+  from { opacity:0; transform:translateY(36px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+.vine { position:absolute; opacity:0.18; }
+.vine.tl { top:0; left:0; }
+.vine.tr { top:0; right:0; transform:scaleX(-1); }
+.vine.bl { bottom:0; left:0; transform:scaleY(-1); }
+.vine.br { bottom:0; right:0; transform:scale(-1,-1); }
+
+.eyebrow {
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 10.5px;
+  letter-spacing: 5px;
+  color: #c2839a;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  animation: rise 1.3s 0.1s both;
+}
+
+.rule {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0;
+}
+.rule-line {
+  flex: 1;
+  height: 0.5px;
+  background: linear-gradient(90deg, transparent, #dda8b8 45%, transparent);
+}
+.rule-gem { color: #d48aa2; font-size: 13px; }
+
+.names-wrap {
+  text-align: center;
+  margin: 26px 0 10px;
+  animation: rise 1.3s 0.25s both;
+}
+
+.name-script {
+  font-family: 'Great Vibes', cursive;
+  font-size: 62px;
+  color: #7a2848;
+  line-height: 1.1;
+  display: block;
+  letter-spacing: 1px;
+}
+
+.amp-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  margin: 6px 0;
+}
+.amp-line { flex:1; height:0.5px; background: linear-gradient(90deg, transparent, #dda8b8); }
+.amp-line.r { background: linear-gradient(90deg, #dda8b8, transparent); }
+.amp {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 28px;
+  color: #c8839a;
+  line-height: 1;
+}
+
+.invite-text {
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #9a607a;
+  line-height: 1.85;
+  margin: 24px 0 20px;
+  animation: rise 1.3s 0.38s both;
+}
+
+.date-plate {
+  background: linear-gradient(135deg, rgba(245,200,215,0.32), rgba(248,218,235,0.18));
+  border: 0.5px solid rgba(210,148,168,0.35);
+  border-radius: 20px;
+  padding: 24px 32px;
+  text-align: center;
+  margin: 20px 0;
+  animation: rise 1.3s 0.48s both;
+}
+.date-eyebrow {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #c07890;
+  margin-bottom: 12px;
+}
+.date-big {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: #6e1e40;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+.date-sub {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #a07085;
+  margin-top: 8px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 22px 0;
+  animation: rise 1.3s 0.58s both;
+}
+.cd-box {
+  background: rgba(255,255,255,0.72);
+  border: 0.5px solid rgba(210,155,175,0.32);
+  border-radius: 14px;
+  padding: 13px 16px;
+  min-width: 64px;
+  text-align: center;
+}
+.cd-num {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #7a2848;
+  display: block;
+  line-height: 1;
+}
+.cd-lbl {
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #b08595;
+  display: block;
+  margin-top: 6px;
+}
+
+.details {
+  margin: 18px 0;
+  animation: rise 1.3s 0.68s both;
+}
+.det-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 11px 0;
+  border-bottom: 0.5px solid rgba(215,165,180,0.2);
+}
+.det-row:last-child { border-bottom: none; }
+.det-ico {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f5c8d8, #f0d5e8);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; flex-shrink: 0;
+}
+.det-lbl {
+  font-size: 9.5px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #b08090;
+  margin-bottom: 2px;
+}
+.det-val {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 15px;
+  color: #5e1a34;
+}
+
+.quote {
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 13.5px;
+  color: #b08898;
+  line-height: 1.9;
+  margin: 22px 0 0;
+  animation: rise 1.3s 0.8s both;
+}
+.quote-attr {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #c09aaa;
+  display: block;
+  margin-top: 6px;
+}
+
+.rsvp {
+  display: block;
+  width: 100%;
+  margin-top: 26px;
+  padding: 15px;
+  background: linear-gradient(135deg, #c86882 0%, #b84e6e 100%);
+  color: #fff5f8;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity .2s, transform .15s;
+  animation: rise 1.3s 0.92s both;
+}
+.rsvp:hover { opacity:.86; transform:translateY(-2px); }
+
+.petal { position:fixed; pointer-events:none; animation:fall linear infinite; z-index:0; }
+@keyframes fall {
+  0%   { transform:translateY(-20px) rotate(0deg) scale(1); opacity:.65; }
+  100% { transform:translateY(110vh) rotate(380deg) scale(0.7); opacity:0; }
+}
+</style>
+</head>
+<body>
+
+<div id="petals"></div>
+
+<div class="card">
+  <svg class="vine tl" width="100" height="100" viewBox="0 0 100 100" fill="none">
+    <path d="M5 95 Q5 5 95 5" stroke="#c87890" stroke-width="1.2" fill="none"/>
+    <path d="M18 95 Q18 18 95 18" stroke="#c87890" stroke-width="0.6" fill="none"/>
+    <circle cx="22" cy="22" r="4" fill="#e8a0b8" opacity=".9"/>
+    <circle cx="38" cy="13" r="2.5" fill="#e8a0b8" opacity=".7"/>
+    <circle cx="13" cy="38" r="2.5" fill="#e8a0b8" opacity=".7"/>
+    <ellipse cx="10" cy="10" rx="7" ry="5" transform="rotate(-45 10 10)" fill="#f5c8d8" opacity=".85"/>
+  </svg>
+  <svg class="vine tr" width="100" height="100" viewBox="0 0 100 100" fill="none">
+    <path d="M5 95 Q5 5 95 5" stroke="#c87890" stroke-width="1.2" fill="none"/>
+    <path d="M18 95 Q18 18 95 18" stroke="#c87890" stroke-width="0.6" fill="none"/>
+    <circle cx="22" cy="22" r="4" fill="#e8a0b8" opacity=".9"/>
+    <ellipse cx="10" cy="10" rx="7" ry="5" transform="rotate(-45 10 10)" fill="#f5c8d8" opacity=".85"/>
+  </svg>
+  <svg class="vine bl" width="100" height="100" viewBox="0 0 100 100" fill="none">
+    <path d="M5 95 Q5 5 95 5" stroke="#c87890" stroke-width="1.2" fill="none"/>
+    <circle cx="22" cy="22" r="4" fill="#e8a0b8" opacity=".9"/>
+    <ellipse cx="10" cy="10" rx="7" ry="5" transform="rotate(-45 10 10)" fill="#f5c8d8" opacity=".85"/>
+  </svg>
+  <svg class="vine br" width="100" height="100" viewBox="0 0 100 100" fill="none">
+    <path d="M5 95 Q5 5 95 5" stroke="#c87890" stroke-width="1.2" fill="none"/>
+    <circle cx="22" cy="22" r="4" fill="#e8a0b8" opacity=".9"/>
+    <ellipse cx="10" cy="10" rx="7" ry="5" transform="rotate(-45 10 10)" fill="#f5c8d8" opacity=".85"/>
+  </svg>
+
+  <p class="eyebrow">Hochzeitseinladung</p>
+
+  <div class="rule">
+    <div class="rule-line"></div>
+    <span class="rule-gem">✦</span>
+    <div class="rule-line"></div>
+  </div>
+
+  <div class="names-wrap">
+    <span class="name-script">Phạm Thuỳ Dương</span>
+    <div class="amp-wrap">
+      <div class="amp-line"></div>
+      <span class="amp">&amp;</span>
+      <div class="amp-line r"></div>
+    </div>
+    <span class="name-script">Dominik Ngô</span>
+  </div>
+
+  <div class="rule" style="margin-top:18px;">
+    <div class="rule-line"></div>
+    <span class="rule-gem" style="font-size:15px;">🌸</span>
+    <div class="rule-line"></div>
+  </div>
+
+  <p class="invite-text">
+    Wir laden Sie herzlich ein,<br>
+    unseren besonderen Tag mit uns zu teilen<br>
+    und unsere Liebe zu feiern.
+  </p>
+
+  <div class="date-plate">
+    <div class="date-eyebrow">Hochzeitsdatum</div>
+    <div class="date-big">25 · 07 · 2026</div>
+    <div class="date-sub">Samstag — Mùa hè Hà Nội</div>
+  </div>
+
+  <div class="countdown">
+    <div class="cd-box">
+      <span class="cd-num" id="cd-d">–</span>
+      <span class="cd-lbl">Tage</span>
+    </div>
+    <div class="cd-box">
+      <span class="cd-num" id="cd-h">–</span>
+      <span class="cd-lbl">Std.</span>
+    </div>
+    <div class="cd-box">
+      <span class="cd-num" id="cd-m">–</span>
+      <span class="cd-lbl">Min.</span>
+    </div>
+    <div class="cd-box">
+      <span class="cd-num" id="cd-s">–</span>
+      <span class="cd-lbl">Sek.</span>
+    </div>
+  </div>
+
+  <div class="details">
+    <div class="det-row">
+      <div class="det-ico">🕐</div>
+      <div>
+        <div class="det-lbl">Uhrzeit</div>
+        <div class="det-val">17:30 Uhr — Hochzeitsfeier</div>
+      </div>
+    </div>
+    <div class="det-row">
+      <div class="det-ico">📍</div>
+      <div>
+        <div class="det-lbl">Veranstaltungsort</div>
+        <div class="det-val">Grand Ballroom, Hà Nội</div>
+      </div>
+    </div>
+    <div class="det-row">
+      <div class="det-ico">💌</div>
+      <div>
+        <div class="det-lbl">Zusage bis</div>
+        <div class="det-val">15. Juli 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rule">
+    <div class="rule-line"></div>
+    <span class="rule-gem">✦</span>
+    <div class="rule-line"></div>
+  </div>
+
+  <p class="quote">
+    „Liebe bedeutet nicht, sich anzuschauen,<br>
+    sondern gemeinsam in dieselbe Richtung zu blicken."
+    <span class="quote-attr">— Antoine de Saint-Exupéry</span>
+  </p>
+
+  <button class="rsvp" onclick="alert('Vielen Dank für Ihre Zusage! 💕')">
+    🌸 &nbsp; Anmeldung bestätigen &nbsp; 🌸
+  </button>
+</div>
+
+<script>
+  const wedding = new Date('2026-07-25T17:30:00');
+  function tick() {
+    const diff = wedding - new Date();
+    if (diff <= 0) { ['d','h','m','s'].forEach(id => document.getElementById('cd-'+id).textContent = '0'); return; }
+    document.getElementById('cd-d').textContent = Math.floor(diff / 86400000);
+    document.getElementById('cd-h').textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2,'0');
+    document.getElementById('cd-m').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2,'0');
+    document.getElementById('cd-s').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2,'0');
+  }
+  tick(); setInterval(tick, 1000);
+
+  const blooms = ['🌸','🌺','🌷','❀','✿'];
+  const wrap = document.getElementById('petals');
+  for (let i = 0; i < 16; i++) {
+    const p = document.createElement('div');
+    p.className = 'petal';
+    p.textContent = blooms[Math.floor(Math.random() * blooms.length)];
+    p.style.cssText = `left:${Math.random()*100}vw; font-size:${10+Math.random()*10}px; animation-duration:${7+Math.random()*9}s; animation-delay:${Math.random()*12}s;`;
+    wrap.appendChild(p);
+  }
+</script>
+</body>
+</html>
